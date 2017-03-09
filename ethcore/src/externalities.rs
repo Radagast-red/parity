@@ -39,7 +39,7 @@ pub struct OriginInfo {
 	address: Address,
 	origin: Address,
 	gas_price: U256,
-	value: U256
+	value: U256,
 }
 
 impl OriginInfo {
@@ -51,7 +51,7 @@ impl OriginInfo {
 			gas_price: params.gas_price,
 			value: match params.value {
 				ActionValue::Transfer(val) | ActionValue::Apparent(val) => val
-			}
+			},
 		}
 	}
 }
